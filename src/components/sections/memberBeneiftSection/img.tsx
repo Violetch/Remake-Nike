@@ -1,4 +1,4 @@
-import { IMG_LIST } from "../../../constant/mb";
+import { IMG_LIST } from "../../../constant/Mb.js";
 
 const Img = () => {
   return (

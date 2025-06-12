@@ -4,9 +4,9 @@ import { CiGlobe } from "react-icons/ci";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const FoSmallScreen = () => {
-  const [activeIndexes, setActiveIndexes] = useState([]);
+  const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
 
-  const handleTitleClick = (index) => {
+  const handleTitleClick = (index: number) => {
     if (activeIndexes.includes(index)) {
       setActiveIndexes(activeIndexes.filter((i) => i !== index));
     } else {

@@ -1,4 +1,3 @@
-import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Copyright = () => {

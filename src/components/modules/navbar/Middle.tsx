@@ -42,9 +42,9 @@ const Middle = () => {
             <ul className="nm-wrapper-list flex absolute left-1/2 -translate-x-1/2 gap-6 font-medium text-neutral-900">
               {NAVBAR_LIST.map((item, index) => (
                 <ul className="dropdown dropdown-hover" key={index}>
-                  <li role="button" tabIndex={0} href="#">
+                  <a role="button" tabIndex={0} href="#">
                     {item.title}
-                  </li>
+                  </a>
                   {/* <ul
                   tabIndex={0}
                   className="dropdown-content flex  justify-center gap-24 -left-[577.5px] bg-neutral-900 w-screen py-5"
@@ -116,9 +116,9 @@ const Middle = () => {
             <ul className="nm-wrapper-list flex absolute left-1/2 -translate-x-1/2 gap-6 font-medium text-neutral-900">
               {NAVBAR_LIST.map((item, index) => (
                 <ul className="dropdown dropdown-hover" key={index}>
-                  <li role="button" tabIndex={0} href="#">
+                  <a role="button" tabIndex={0} href="#">
                     {item.title}
-                  </li>
+                  </a>
                   {/* <ul
                   tabIndex={0}
                   className="dropdown-content flex  justify-center gap-24 -left-[577.5px] bg-neutral-900 w-screen py-5"

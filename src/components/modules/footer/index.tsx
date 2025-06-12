@@ -1,5 +1,5 @@
 import FoBigScreen from "./FoBigScreen";
-import FoSmallScreen from "./foSmallScreen";
+import FoSmallScreen from "./FoSmallScreen";
 import { useMediaQuery } from "react-responsive";
 import Copyright from "./Copyright";
 

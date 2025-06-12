@@ -3,9 +3,9 @@ import Navbar from "../components/modules/navbar";
 import HeroSection from "../components/sections/heroSection";
 import FeaturedSection from "../components/sections/featuredSection";
 import TheLatestSectoin from "../components/sections/theLatestSection";
-import ClassicSpotlight from "../components/sections/ClassicSpotlightSection";
+import ClassicSpotlight from "../components/sections/classicSpotlightSection";
 import MemberBenefitSection from "../components/sections/memberBeneiftSection";
-import Footer from "../components/modules/Footer";
+import Footer from "../components/modules/footer";
 
 const LandingPage = () => {
   return (

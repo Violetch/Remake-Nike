@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { NAV_LIST } from "../../../constant/mb";
+import { NAV_LIST } from "../../../constant/Mb";
 
 const MbSmallScreen = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState<null | number>(null);
 
-  const handleTitleClick = (index) => {
+  const handleTitleClick = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 

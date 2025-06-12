@@ -1,4 +1,4 @@
-import { NAV_LIST } from "../../../constant/mb";
+import { NAV_LIST } from "../../../constant/Mb";
 
 const NavList = () => {
   return (
