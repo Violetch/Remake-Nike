@@ -1,12 +1,9 @@
-import React from "react";
-import EachUtils from "../../../utils";
 import { SHOES_IMAGE } from "../../../constant/Shoes";
 
 const Shoes = () => {
   return (
-    <EachUtils
-      of={SHOES_IMAGE}
-      render={(item, index) => (
+    <>
+      {SHOES_IMAGE.map((item, index) => (
         <div
           className="relative flex flex-col w-[500px] h-[500px] bg-red-600 text-neutral-900 overflow-hidden mx-2 cursor-pointer"
           key={index}
@@ -16,8 +13,8 @@ const Shoes = () => {
             {item.title}
           </h1>
         </div>
-      )}
-    />
+      ))}
+    </>
   );
 };
 

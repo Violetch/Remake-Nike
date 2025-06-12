@@ -1,5 +1,3 @@
-import React from "react";
-
 const FeaturedSection = () => {
   return (
     <div className="flex justify-center h-fit text-neutral-900 mt-14">

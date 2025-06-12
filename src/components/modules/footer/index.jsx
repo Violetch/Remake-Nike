@@ -1,4 +1,3 @@
-import React from "react";
 import FoBigScreen from "./FoBigScreen";
 import FoSmallScreen from "./foSmallScreen";
 import { useMediaQuery } from "react-responsive";

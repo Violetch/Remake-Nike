@@ -1,9 +1,7 @@
 import { useAtom } from "jotai";
-import React from "react";
 import { CgSearch } from "react-icons/cg";
 import { SiNike } from "react-icons/si";
 import { searchAtom } from "../../../jotai";
-import EachUtils from "../../../utils/index";
 import { POPULAR_SEARCH } from "../../../constant/Navbar";
 import { motion } from "framer-motion";
 
@@ -48,32 +46,29 @@ const Search = () => {
         </motion.h1>
       </motion.div>
       <div className="ns-wrapper-list flex flex-col mt-3 w-[63%]">
-        <EachUtils
-          of={POPULAR_SEARCH}
-          render={(item, index) => (
-            <ul key={index}>
-              <motion.li
-                className="text-neutral-600 text-sm"
-                initial={{ translateY: "-15px", opacity: 0 }}
+        {POPULAR_SEARCH.map((item, index) => (
+          <ul key={index}>
+            <motion.li
+              className="text-neutral-600 text-sm"
+              initial={{ translateY: "-15px", opacity: 0 }}
+              animate={{ translateY: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.1 }}
+            >
+              {item.title}
+            </motion.li>
+            <li className="flex gap-5 mt-3">
+              <motion.a
+                initial={{ translateY: "50px", opacity: 0 }}
                 animate={{ translateY: 0, opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.1 }}
+                transition={{ delay: item.delay, duration: 0.1 }}
+                className="text-neutral-900 text-2xl hover:text-neutral-500"
+                href="#"
               >
-                {item.title}
-              </motion.li>
-              <li className="flex gap-5 mt-3">
-                <motion.a
-                  initial={{ translateY: "50px", opacity: 0 }}
-                  animate={{ translateY: 0, opacity: 1 }}
-                  transition={{ delay: item.delay, duration: 0.1 }}
-                  className="text-neutral-900 text-2xl hover:text-neutral-500"
-                  href="#"
-                >
-                  {item.subTitle}
-                </motion.a>
-              </li>
-            </ul>
-          )}
-        />
+                {item.subTitle}
+              </motion.a>
+            </li>
+          </ul>
+        ))}
       </div>
     </motion.nav>
   );

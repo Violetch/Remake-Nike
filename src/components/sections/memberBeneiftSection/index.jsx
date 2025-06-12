@@ -1,4 +1,3 @@
-import React from "react";
 import Img from "./img";
 import NavList from "./NavList";
 import MbSmallScreen from "./MbSmallScreen";

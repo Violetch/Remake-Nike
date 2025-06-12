@@ -1,12 +1,9 @@
-import React from "react";
-import EachUtils from "../../../utils";
 import { IMG_LIST } from "../../../constant/mb";
 
 const Img = () => {
   return (
-    <EachUtils
-      of={IMG_LIST}
-      render={(item, index) => (
+    <>
+      {IMG_LIST.map((item, index) => (
         <div
           className="relative flex flex-col justify-end items-start p-12 h-[700px] w-[600px] gap-4 overflow-hidden cursor-pointer"
           key={index}
@@ -22,8 +19,8 @@ const Img = () => {
             {item.buttonTitle}
           </button>
         </div>
-      )}
-    />
+      ))}
+    </>
   );
 };
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Bottom = () => {
   return (
     <div className="flex flex-col items-center py-2 bg-neutral-200/60 text-neutral-900">

@@ -1,7 +1,6 @@
 import { CgSearch } from "react-icons/cg";
 import { IoBagRemoveOutline, IoHeartHalfOutline } from "react-icons/io5";
 import { SiNike } from "react-icons/si";
-import EachUtils from "../../../utils/index";
 import Search from "./Search";
 import { useAtom } from "jotai";
 import { menuAtom, searchAtom } from "../../../jotai";
@@ -41,14 +40,12 @@ const Middle = () => {
           >
             <SiNike className="text-neutral-900 cursor-pointer" size={55} />
             <ul className="nm-wrapper-list flex absolute left-1/2 -translate-x-1/2 gap-6 font-medium text-neutral-900">
-              <EachUtils
-                of={NAVBAR_LIST}
-                render={(item, index) => (
-                  <li className="dropdown dropdown-hover" key={index}>
-                    <a role="button" tabIndex={0} href="#">
-                      {item.title}
-                    </a>
-                    {/* <ul
+              {NAVBAR_LIST.map((item, index) => (
+                <ul className="dropdown dropdown-hover" key={index}>
+                  <li role="button" tabIndex={0} href="#">
+                    {item.title}
+                  </li>
+                  {/* <ul
                   tabIndex={0}
                   className="dropdown-content flex  justify-center gap-24 -left-[577.5px] bg-neutral-900 w-screen py-5"
                 >
@@ -74,9 +71,8 @@ const Middle = () => {
                       </li>
                     ))}
                 </ul> */}
-                  </li>
-                )}
-              />
+                </ul>
+              ))}
             </ul>
             <div className="nm-wrapper-icon flex gap-5 items-center">
               <motion.div
@@ -118,14 +114,12 @@ const Middle = () => {
           <div className="nm-container flex justify-between items-center px-12 py-2 w-full z-40">
             <SiNike className="text-neutral-900 cursor-pointer" size={55} />
             <ul className="nm-wrapper-list flex absolute left-1/2 -translate-x-1/2 gap-6 font-medium text-neutral-900">
-              <EachUtils
-                of={NAVBAR_LIST}
-                render={(item, index) => (
-                  <li className="dropdown dropdown-hover" key={index}>
-                    <a role="button" tabIndex={0} href="#">
-                      {item.title}
-                    </a>
-                    {/* <ul
+              {NAVBAR_LIST.map((item, index) => (
+                <ul className="dropdown dropdown-hover" key={index}>
+                  <li role="button" tabIndex={0} href="#">
+                    {item.title}
+                  </li>
+                  {/* <ul
                   tabIndex={0}
                   className="dropdown-content flex  justify-center gap-24 -left-[577.5px] bg-neutral-900 w-screen py-5"
                 >
@@ -151,9 +145,8 @@ const Middle = () => {
                       </li>
                     ))}
                 </ul> */}
-                  </li>
-                )}
-              />
+                </ul>
+              ))}
             </ul>
             <div className="nm-wrapper-icon flex gap-5 items-center">
               <motion.div

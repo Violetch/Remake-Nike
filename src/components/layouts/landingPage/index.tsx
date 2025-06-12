@@ -1,6 +1,10 @@
-import React from "react";
+import { ReactNode } from "react";
 
-const LandingLayout = ({ children }) => {
+interface LandingLayoutProps {
+  children: ReactNode;
+}
+
+const LandingLayout = ({ children }: LandingLayoutProps) => {
   return (
     <div className="flex flex-col relative min-h-screen bg-white overflow-hidden">
       {children}

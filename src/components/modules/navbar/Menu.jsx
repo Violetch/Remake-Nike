@@ -1,10 +1,8 @@
 import { useAtom } from "jotai";
-import React from "react";
 import { RxCross2, RxQuestionMarkCircled } from "react-icons/rx";
 import { menuAtom } from "../../../jotai";
 import { motion } from "framer-motion";
 import { MdArrowForwardIos, MdInbox, MdOutlineStore } from "react-icons/md";
-import EachUtils from "../../../utils";
 import { MENU_LIST, MENU_LIST_1 } from "../../../constant/Navbar";
 import { SiJordan } from "react-icons/si";
 import { IoBagOutline } from "react-icons/io5";
@@ -28,21 +26,18 @@ const Menu = () => {
         <RxCross2 size={25} />
       </div>
       <div className="flex flex-col gap-3 mt-9 text-neutral-900">
-        <EachUtils
-          of={MENU_LIST}
-          render={(item, index) => (
-            <ul className="flex justify-between items-center" key={index}>
-              <li
-                className={`text-2xl ${
-                  item.icon && "hover:text-neutral-500"
-                } cursor-pointer`}
-              >
-                {item.title}
-              </li>
-              {item.icon && <MdArrowForwardIos size={20} />}
-            </ul>
-          )}
-        />
+        {MENU_LIST.map((item, index) => (
+          <ul className="flex justify-between items-center" key={index}>
+            <li
+              className={`text-2xl ${
+                item.icon && "hover:text-neutral-500"
+              } cursor-pointer`}
+            >
+              {item.title}
+            </li>
+            {item.icon && <MdArrowForwardIos size={20} />}
+          </ul>
+        ))}
       </div>
       <div className="flex items-center text-neutral-900 gap-3 mt-14 mb-14">
         <SiJordan size={25} />
@@ -66,20 +61,17 @@ const Menu = () => {
       </div>
 
       <div className="flex flex-col gap-4">
-        <EachUtils
-          of={MENU_LIST_1}
-          render={(item, index) => (
-            <ul key={index}>
-              <li className="flex items-center gap-3 text-neutral-900 text-lg font-medium cursor-pointer">
-                {item.help && <RxQuestionMarkCircled size={20} />}
-                {item.bag && <IoBagOutline size={20} />}
-                {item.orders && <MdInbox size={20} />}
-                {item.find && <MdOutlineStore size={20} />}
-                {item.title}
-              </li>
-            </ul>
-          )}
-        />
+        {MENU_LIST_1.map((item, index) => (
+          <ul key={index}>
+            <li className="flex items-center gap-3 text-neutral-900 text-lg font-medium cursor-pointer">
+              {item.help && <RxQuestionMarkCircled size={20} />}
+              {item.bag && <IoBagOutline size={20} />}
+              {item.orders && <MdInbox size={20} />}
+              {item.find && <MdOutlineStore size={20} />}
+              {item.title}
+            </li>
+          </ul>
+        ))}
       </div>
     </motion.div>
   );

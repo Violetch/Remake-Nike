@@ -1,5 +1,3 @@
-import React from "react";
-
 const TheLatestSectoin = () => {
   return (
     <div className="flex justify-center mt-28">
